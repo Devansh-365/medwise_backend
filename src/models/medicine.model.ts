@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import logger from "../utils/logger";
+import { request } from "http";
 
 const MedicineSchema = new mongoose.Schema(
   {
@@ -44,3 +45,11 @@ export const createMedicine = (values: Record<string, any>) => {
       throw new Error("Failed to create medicine.");
     });
 };
+
+export const deleteMedicine=async(id:any) =>{
+  id=id.toString
+  console.log(id,"in model file")
+  MedcineModel.findOneAndDelete(id)
+}
+
+
