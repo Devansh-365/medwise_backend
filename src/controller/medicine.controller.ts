@@ -62,7 +62,7 @@ export const updateUserMedicine = async (
   req: express.Request,
   res: express.Response
 ) => {
-  console.log(req.params)
+  //console.log(req.params)
   const { id } = req.params;
   // console.log(id)
   const updates = req.body;
